@@ -30,3 +30,5 @@ const makeRequest = {
     });
   }
 };
+
+export default makeRequest;

@@ -1,9 +1,11 @@
-var rivraddon = {
+import makeRequest from "./utils/endpointUtils";
+import endpoint from "./config/endpoint";
+import constants from "./config/constants";
+
+const rivraddon = {
   analytics: {
     enableAnalytics: function() {
-      console.log(
-        "SIMPLAEX CODE CHALLENGE LOG rivraddonanalytics.enableAnalytics"
-      );
+      console.log(constants.enableAnalyticsLogOutput);
     },
     trackPbjsEvent: function({ eventType }) {
       makeRequest
@@ -19,3 +21,6 @@ var rivraddon = {
     }
   }
 };
+
+window["rivraddon"] = rivraddon;
+export default rivraddon;
