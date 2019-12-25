@@ -1,7 +1,7 @@
 import makeRequest from "./utils/endpointUtils";
 import endpoint from "./config/endpoint";
 import constants from "./config/constants";
-import rivraddon from "./";
+import rivraddon from ".";
 
 it("should print message in console", () => {
   global.console = {

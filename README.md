@@ -4,7 +4,7 @@ Tracks [Prebid.js](http://prebid.org/developers.html) events.
 
 ## Installation
 
-In order to run the app you need install dependencies.
+In order to run the app you need to install dependencies.
 
 ### npm
 
@@ -42,7 +42,7 @@ Jest testing framework is used for writing unit tests.
 
 ### Unit tests
 
-Runs all unit tests with:
+Run all unit tests with:
 
 `npm test` <br/>or<br/>
 `yarn test`
