@@ -1,6 +1,12 @@
 /**
  * Resources referred:
  * https://stackoverflow.com/questions/30008114/how-do-i-promisify-native-xhr
+ *
+ * Following implementation of XMLHttpRequest (XHR) to make POST requests is
+ * intentionally wrapped in a Promise object so as to make it easily usable in
+ * other places. Also, using promises allows us to stay consistent with the
+ * other parts of the code by avoiding ancient callback mechanism of XHR and
+ * therefore, avoiding callback hell.
  */
 
 const makeRequest = {

@@ -3,6 +3,10 @@ import endpoint from "./config/endpoint";
 import constants from "./config/constants";
 import rivraddon from ".";
 
+beforeEach(() => {
+  jest.restoreAllMocks();
+});
+
 it("should print message in console", () => {
   global.console = {
     log: jest.fn()
@@ -11,6 +15,7 @@ it("should print message in console", () => {
   expect(global.console.log).toHaveBeenCalledWith(
     constants.enableAnalyticsLogOutput
   );
+  expect(global.console.log).toHaveBeenCalledTimes(1);
 });
 
 it("should call makeRequest.post when trackPbjsEvent is called", async () => {
@@ -20,5 +25,4 @@ it("should call makeRequest.post when trackPbjsEvent is called", async () => {
     eventType: "abc"
   });
   expect(makeRequest.post).toHaveBeenCalledTimes(1);
-  jest.clearAllMocks();
 });
